@@ -5,37 +5,22 @@ Movie List
 @endsection
 
 @section('movie-list')
-Movie List content
-@endsection
 
-
-
-{{-- @section('comic-list')
-<div class="comic-list">
-    <div class="position-relative">
-    <span class="label fs-1">CURRENT SERIES</span>
-  </div>
-
-  <section class="pt-5">
+<section class="pt-5 ">
     <ul class="my-5">
-        @foreach ($comic_list as $comic)
+        @foreach ($movies as $movie)
       <li class="mb-4">
-        <a href="#">
-          <div class="cover">
-            <img
-            
-             src=' https://picsum.photos/300/500'
-              alt=""
-            />
-          </div>
-          <div class="series">{{$comic['series']}}</div>
+        <a href="#">        
+          <div class="series">{{$movie->title}}</div>
+          <div class="series">{{$movie->original_title}}</div>
+          <div class="series">{{$movie->nationality}}</div>
+          <div class="series">{{$movie->date}}</div>
+          <div class="series">{{$movie->vote}}</div>
         </a>
       </li>
       @endforeach
     </ul>
-    <div class="d-flex justify-content-center mb-4">
-      <button class="label">LOAD MORE</button>
-    </div>
-  </section>
-</div>
-@endsection --}}
+@endsection
+
+
+
